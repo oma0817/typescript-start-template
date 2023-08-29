@@ -29,5 +29,11 @@ const auth = {
   getRefreshToken() {
     return localStorage.getItem("refreshToken");
   },
+  setChangePassword(pw: string) {
+    return localStorage.setItem("changePassword", pw);
+  },
+  getChangePassword() {
+    return localStorage.getItem("changePassword");
+  },
 };
 export default auth;
