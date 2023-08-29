@@ -11,10 +11,18 @@ export const customMedia = generateMedia({
 export const GlobalStyles = createGlobalStyle`
     ${reset}
 
-    * {
+    *,
+    *::after,
+    *::before {
         outline: none;
         box-sizing: border-box;
-        font-family: "Noto Sans KR", sans-serif;
+        margin: 0px;
+        padding: 0px;
+        border: 0;
+        font-family: 'Noto Sans KR' !important;
+        word-break: break-all;
+
+        -webkit-tap-highlight-color: transparent !important;
     }
 
     *:not(input, textarea) {
@@ -76,5 +84,10 @@ export const GlobalStyles = createGlobalStyle`
 
     b {
         font-weight: 700;
+    }
+
+    .ql-snow .ql-editor * {
+        font-weight: revert !important;
+        font-style: revert !important;
     }
 `;
